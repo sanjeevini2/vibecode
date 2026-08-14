@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>1stPrinci</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="app-header">
+      <div class="brand">
+        <span class="brand-mark">1P</span>
+        <div>
+          <h1>1stPrinci</h1>
+          <p>Think through a problem or customer pain from first principles.</p>
+        </div>
+      </div>
+      <button id="reset-btn" class="ghost-btn" title="Start a new session">New session</button>
+    </header>
+
+    <main id="chat" class="chat" aria-live="polite"></main>
+
+    <div id="empty-state" class="empty-state">
+      <p>Start by describing a problem or a piece of customer pain in a sentence or two.</p>
+      <div class="prompt-chips">
+        <button class="chip" data-prompt="Users are dropping off during our signup flow and I don't know why.">Users drop off during signup</button>
+        <button class="chip" data-prompt="Customers keep asking for a feature we think is a distraction from the real problem.">A feature request that feels like a distraction</button>
+        <button class="chip" data-prompt="Support tickets say our product is 'too complicated' but I'm not sure what that means.">"Too complicated" complaints</button>
+      </div>
+    </div>
+
+    <form id="composer" class="composer">
+      <textarea
+        id="input"
+        rows="1"
+        placeholder="Describe the problem or customer pain..."
+        autofocus
+      ></textarea>
+      <button id="send-btn" type="submit" aria-label="Send">Send</button>
+    </form>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
